@@ -1,0 +1,290 @@
+10:03:54 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+10:10:05 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:12:35 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:13:13 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:24:33 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:24:36 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:26:17 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:34:29 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+10:34:29 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:34:29 **** Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+10:35:35 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:37:09 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:38:13 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+10:41:19 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+10:42:49 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+10:44:38 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:48:38 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+10:49:48 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+20:24:45 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:24:45 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:24:45 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+../src/LAB03.cpp:65:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Undefined symbols for architecture x86_64:
+  "searchBooksByIsbn(int, int*, int)", referenced from:
+      _main in LAB03.o
+  "searchBooksByAuthor(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, int)", referenced from:
+      _main in LAB03.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [LAB03] Error 1
+20:25:03 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:25:03 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:25:03 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Undefined symbols for architecture x86_64:
+  "searchBooksByIsbn(int, int*, int)", referenced from:
+      _main in LAB03.o
+  "searchBooksByAuthor(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, int)", referenced from:
+      _main in LAB03.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [LAB03] Error 1
+20:25:34 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:25:34 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:25:34 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+20:25:42 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:25:42 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:25:42 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+20:25:52 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+20:27:24 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+20:28:26 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+20:29:04 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:29:04 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:29:04 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+20:29:07 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+20:30:45 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:30:45 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:30:45 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+../src/LAB03.cpp:66:1: error: expected unqualified-id
+{
+^
+../src/LAB03.cpp:78:1: error: expected unqualified-id
+{
+^
+2 errors generated.
+make: *** [src/LAB03.o] Error 1
+20:30:52 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:30:52 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:30:52 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+20:31:09 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:31:09 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:31:09 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+20:31:12 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+20:33:04 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:33:04 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:33:05 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+20:33:14 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 
+20:35:08 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+Building file: ../src/LAB03.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LAB03.d" -MT"src/LAB03.d" -o "src/LAB03.o" "../src/LAB03.cpp"
+Finished building: ../src/LAB03.cpp
+ 
+Building target: LAB03
+Invoking: MacOS X C++ Linker
+g++  -o "LAB03"  ./src/LAB03.o   
+Finished building target: LAB03
+ 

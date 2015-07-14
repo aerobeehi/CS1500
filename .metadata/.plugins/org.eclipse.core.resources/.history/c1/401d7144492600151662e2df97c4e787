@@ -1,0 +1,49 @@
+/*
+ * HWo1.h
+ *
+ *  Created on: Jul 9, 2015
+ *      Author: lauriaclarke
+ */
+
+#ifndef SRC_HW01_H_
+#define SRC_HW01_H_
+
+using namespace std;
+
+#define OPTION_ONE        1
+#define OPTION_TWO        2
+#define OPTION_THREE      3
+#define OPTION_ZERO       0
+
+#define OPTION_ONE_MSG    "Login"
+#define OPTION_TWO_MSG    "Register"
+#define OPTION_THREE_MSG  "Login as Guest"
+#define	OPTION_ZERO_MSG   "Quit"
+#define ERROR_MSG         "Incorrect option. Please try again."
+//#define USER_NAME         "User name: "
+//#define PASSWORD          "Password: "
+#define VERIFY_PASSWORD   "Verify Password: "
+
+
+
+struct user
+{
+	string userName;
+	string password;
+	string welcomeMessage;
+} Alice, Thomas, Yoda, ;
+
+
+
+
+void printMenu();
+void login(user currentUser);
+void printMenuOption(int optionValue, string optionMessage);
+void printSelectedOption(string optionMessage);
+int checkOption(int userInput);
+
+
+
+
+
+#endif /* SRC_HW01_H_ */

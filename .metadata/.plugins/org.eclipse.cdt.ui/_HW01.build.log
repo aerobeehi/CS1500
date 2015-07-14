@@ -1,0 +1,19 @@
+07:24:30 **** Incremental Build of configuration Debug for project _HW01 ****
+make all 
+Building file: ../src/hw_01_c.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/hw_01_c.d" -MT"src/hw_01_c.d" -o "src/hw_01_c.o" "../src/hw_01_c.cpp"
+Finished building: ../src/hw_01_c.cpp
+ 
+Building target: _HW01
+Invoking: MacOS X C++ Linker
+g++  -o "_HW01"  ./src/hw_01_c.o   
+Undefined symbols for architecture x86_64:
+  "login()", referenced from:
+      checkOption(int) in hw_01_c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [_HW01] Error 1
+
+07:24:30 Build Finished (took 387ms)
+

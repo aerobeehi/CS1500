@@ -1,0 +1,19 @@
+07:32:53 **** Incremental Build of configuration Debug for project _Homework01 ****
+make all 
+Building file: ../src/homework01.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/homework01.d" -MT"src/homework01.d" -o "src/homework01.o" "../src/homework01.cpp"
+Finished building: ../src/homework01.cpp
+ 
+Building target: _Homework01
+Invoking: MacOS X C++ Linker
+g++  -o "_Homework01"  ./src/homework01.o   
+Undefined symbols for architecture x86_64:
+  "login()", referenced from:
+      checkOption(int) in homework01.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [_Homework01] Error 1
+
+07:32:54 Build Finished (took 488ms)
+

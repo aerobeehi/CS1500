@@ -1,0 +1,142 @@
+/*
+ * Lab02_Clarke_Lauria.cpp
+ *
+ *  Created on: Jul 7, 2015
+ *     Author: lauriaclarke
+ */
+
+#include <iostream>
+#include <string>
+#include "HW01.h"
+
+using namespace std;
+
+//void registerUser();
+
+//
+
+int main()
+{
+	int userInput;
+
+	do
+	{
+		printMenu();
+		cin >> userInput;
+		checkOption(userInput);
+	} while (userInput != 0);
+
+	return 0;
+}
+
+void printMenu()
+{
+	cout << "\n*----------------------------*\n";
+	printMenuOption(OPTION_ONE, OPTION_ONE_MSG);
+	printMenuOption(OPTION_TWO, OPTION_TWO_MSG);
+	printMenuOption(OPTION_THREE, OPTION_THREE_MSG);
+	printMenuOption(OPTION_ZERO, OPTION_ZERO_MSG);
+
+	cout << "\nPlease select an option : ";
+}
+
+int checkOption(int option)
+{
+	switch (option)
+	{
+	case OPTION_ONE:
+		printSelectedOption(OPTION_ONE_MSG);
+		login();
+		return 1;
+
+	case OPTION_TWO:
+		printSelectedOption(OPTION_TWO_MSG);
+		registerUser();
+		return 1;
+
+	case OPTION_THREE:
+		printSelectedOption(OPTION_THREE_MSG);
+		return 1;
+
+	case OPTION_ZERO:
+		printSelectedOption(OPTION_ZERO_MSG);
+		cout << "\n\r" << "Quitting Menu..." << "\n";
+		return 0;
+
+	default:
+		cout << "\n\r"
+		ERROR_MSG << "\n\r";
+	}
+
+	return 0;
+}
+
+void printSelectedOption(string optionMessage)
+{
+	cout << "\n-- " << optionMessage << " --\n\r";
+}
+
+void printMenuOption(int optionValue, string optionMessage)
+{
+	cout << "[" << optionValue << "] " << optionMessage << "\n";
+}
+
+void login()
+{
+	string username;
+	string password;
+
+	cout << USER_NAME_MSG;
+	cin >> username;
+
+	cout << PASSWORD_MSG;
+	cin >> password;
+
+	if (username == Alice[0] && password == Alice[1])
+	{
+		cout << Alice[2] << "\n";
+	}
+	else if (username == Thomas[0] && password == Thomas[1])
+	{
+		cout << Thomas[2] << "\n";
+	}
+	else if (username == Yoda[0] && password == Yoda[1])
+	{
+		cout << Yoda[2] << "\n";
+	}
+	else
+	{
+		cout << "User name or password incorrect.\n\r";
+	}
+}
+
+void registerUser()
+{
+	bool passwordMatch;
+	string userName;
+	string firstPassword;
+	string secondPassword;
+
+	cout << USER_NAME_MSG;
+	cin >> userName;
+
+	cout << PASSWORD_MSG;
+	cin >> firstPassword;
+
+	cout << VERIFY_PASSWORD;
+	cin >> secondPassword;
+
+	if (firstPassword == secondPassword)
+	{
+		passwordMatch = 1;
+//		return 1;
+	}
+	else
+	{
+		passwordMatch = 0;
+		cout << "Passwords do not match. Please try again.\n";
+//		return 0;
+	}
+}
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Default C++ source template" key="LastUsedSourceTemplate"/>
+	<item value="Default C++ header template" key="LastUsedHeaderTemplate"/>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+		<item value="339" key="size.height"/>
+		<item value="321" key="location.y"/>
+		<item value="350" key="size.width"/>
+		<item value="380" key="location.x"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+</section>
