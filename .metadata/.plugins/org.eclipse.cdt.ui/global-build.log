@@ -288,3 +288,48 @@ Invoking: MacOS X C++ Linker
 g++  -o "LAB03"  ./src/LAB03.o   
 Finished building target: LAB03
  
+20:47:34 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:35 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:35 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:35 **** Build of configuration Debug for project LAB04 ****
+make all 
+Building file: ../src/Lab_04_QuickSort_Clarke_Lauria.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Lab_04_QuickSort_Clarke_Lauria.d" -MT"src/Lab_04_QuickSort_Clarke_Lauria.d" -o "src/Lab_04_QuickSort_Clarke_Lauria.o" "../src/Lab_04_QuickSort_Clarke_Lauria.cpp"
+../src/Lab_04_QuickSort_Clarke_Lauria.cpp:10:1: error: 'main' must return 'int'
+void main()
+^~~~
+int
+1 error generated.
+make: *** [src/Lab_04_QuickSort_Clarke_Lauria.o] Error 1
+20:47:56 **** Incremental Build of configuration Debug for project HW01 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:56 **** Incremental Build of configuration Debug for project LAB02 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:56 **** Incremental Build of configuration Debug for project LAB03 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:57 **** Incremental Build of configuration Debug for project LAB04 ****
+make all 
+Building file: ../src/Lab_04_QuickSort_Clarke_Lauria.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Lab_04_QuickSort_Clarke_Lauria.d" -MT"src/Lab_04_QuickSort_Clarke_Lauria.d" -o "src/Lab_04_QuickSort_Clarke_Lauria.o" "../src/Lab_04_QuickSort_Clarke_Lauria.cpp"
+../src/Lab_04_QuickSort_Clarke_Lauria.cpp:41:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+Finished building: ../src/Lab_04_QuickSort_Clarke_Lauria.cpp
+ 
+Building target: LAB04
+Invoking: MacOS X C++ Linker
+g++  -o "LAB04"  ./src/Lab_04_QuickSort_Clarke_Lauria.o   
+Finished building target: LAB04
+ 
