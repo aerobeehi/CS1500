@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/LAB03.cpp 
+../src/Lab_03_Linear_Search_Clarke_Lauria.cpp 
 
 OBJS += \
-./src/LAB03.o 
+./src/Lab_03_Linear_Search_Clarke_Lauria.o 
 
 CPP_DEPS += \
-./src/LAB03.d 
+./src/Lab_03_Linear_Search_Clarke_Lauria.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -1,0 +1,151 @@
+/*
+ * Lab_05_Dynamic_Arrays_Clarke_Lauria.cpp
+ *
+ *  Created on: Jul 19, 2015
+ *      Author: lauriaclarke
+ */
+#include <iostream>
+using namespace std;
+
+#define SIZE_MSG "\nSize of new array:"
+
+void displayIntArray(int arr[], int size);
+void readIntArray(int arr[], int size);
+int* concatenateIntArrays(int arr1[], int arr2[], int size1, int size2);
+int* copyArray(int arr[], int size);
+int* subArray(int arr[], int size, int start, int count);
+
+int main()
+{
+    int* arr1;
+	int* arr2;
+    int* arr3;
+    int* arr4;
+    int* arr5;
+    int* arr6;
+
+    int size1;
+    int size2;
+    int size3;
+    int size5;
+    int subArrayStart;
+    int subArraySize;
+
+    // Read 2 dynamic arrays
+    cout << SIZE_MSG;
+    cin >> size1;
+    cout << SIZE_MSG;
+    cin >> size2;
+
+    arr1 = new int[size1];
+    arr2 = new int[size2];
+
+    readIntArray(arr1, size1);
+    readIntArray(arr2, size2);
+
+    // concatenate two arrays into a third
+
+    arr3 = concatenateIntArrays(arr1, arr2, size1, size2);
+
+    size3 = size1 + size2;
+    cout << "\nConcatenated Array:\n";
+    displayIntArray(arr3, size3);
+
+
+    // Copy an array
+    arr4 = copyArray(arr1, size1);
+
+    cout << "\nCopied Array:\n";
+    displayIntArray(arr4, size1);
+
+    // Get sub array
+    // Read parent array
+
+    cout << SIZE_MSG;
+    cin >> size4\5;
+    arr5 = new int[size5];
+    readIntArray(arr5, size5);
+
+    // get sub array
+    cout << "\nStart of sub-array: ";
+    cin >> subArrayStart;
+    cout << "\nLength of sub-array: ";
+    cin >> subArraySize;
+    arr6 = subArray(arr4, size4, subArrayStart, subArraySize);
+
+    // display sub array
+    cout << "\nSub Array:\n";
+    displayIntArray(arr5, subArraySize);
+}
+
+
+void displayIntArray(int arr[], int size)
+{
+	cout << "\nInteger array of size " << size << "\n";
+	for (int i = 0; i < size; i++)
+	{
+		cout << "[" << i << "] " << arr[i] << "\n";
+	}
+}
+
+
+
+void readIntArray(int arr[], int size)
+{
+	cout << "\nPlease input integer array of size " << size << ":\n";
+	for (int i = 0; i < size; i++)
+	{
+		cout << "[" << i << "] ";
+		cin >> arr[i];
+	}
+	cout <<"Array is full.\n";
+}
+
+
+
+
+int* copyArray(int arr1[], int size1)
+{
+	int* copy;
+	copy = new int[size1];
+
+	for (int i = 0; i < size1; i++)
+	{
+		copy[i] = arr1[i];
+	}
+
+	return copy;
+}
+
+
+int* concatenateIntArrays(int arr1[], int arr2[], int size1, int size2)
+{
+	int* concat;
+	concat = new int[size1 + size2];
+
+	for (int i = 0; i < size1; i++)
+	{
+		concat[i] = arr1[i];
+	}
+
+	for (int i = size1; i < size1 + size2; i++)
+	{
+		concat[i] = arr2[i - size1];
+	}
+
+	return concat;
+}
+
+
+int* subArray(int arr[], int size, int start, int count)
+{
+	int* sub;
+	sub = new int[count];
+
+	for (int i = start; i < (start + count); i++)
+	{
+		sub[i - start] = arr[i];
+	}
+	return sub;
+}
+

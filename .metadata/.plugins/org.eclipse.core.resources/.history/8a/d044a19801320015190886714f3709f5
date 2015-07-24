@@ -1,0 +1,260 @@
+/*
+ * HW_03_Dynamic_Arrays_And_Structures_Clarke_Lauria.cpp
+ *
+ *  Created on: Jul 23, 2015
+ *      Author: lauriaclarke
+ */
+
+/***************************** Include Files *********************************/
+#include <iostream>
+#include <string>
+using namespace std;
+
+/************************** Constant Definitions *****************************/
+// Numerical values of menu options.
+#define QUIT                        0
+#define CREATE_NEW_APP_ARRAY        1
+#define CREATE_NEW_APP              2
+#define READ_ALL_APPS               3
+#define UPDATE_APP                  4
+#define DELETE_APP                  5
+
+// Text for menu options.
+#define CREATE_NEW_APP_ARRAY_MSG   "Create New Array of Applications"
+#define CREATE_NEW_APP_MSG         "Add New Application to Array"
+#define READ_ALL_APPS_MSG          "Display Array of Applications"
+#define UPDATE_APP_MSG             "Update Existing Application"
+#define	QUIT_MSG                   "Quit"
+#define ERROR_MSG                  "Incorrect option. Please try again."
+
+/************************** Structure Prototypes ******************************/
+
+struct Application
+{
+	string name;
+	float price;
+};
+
+/************************** Function Prototypes ******************************/
+
+
+Application* createNewAppArray();
+Application* createNewApp();
+
+int chooseApp(Application* appArray, int appArrayCount);
+int displayMainMenu();
+void displayAppArray(Application* appArray, int);
+void addAppToAppArray(Application* app, Application* appArray,
+		int appArrayCount);
+void printMenuOption(int optionValue, string optionMessage);
+void printSelectedOption(string optionMessage);
+void updateApp(Application* appArray, int appIndex);
+
+
+/************************** Variable Definitions *****************************/
+
+/******************************************************************************/
+/******************************************************************************/
+
+int main()
+{
+	Application* appArray;    // array of applications
+	Application* app;        // pointer to an application
+
+	int choice;                // current menu choice
+	int appArrayCount = 0;    // how many applications have been added to array
+	int appIndex;            // which application to update
+
+	do
+	{
+		choice = displayMainMenu();    // display menu and return choice
+		switch (choice)
+		{
+		case CREATE_NEW_APP_ARRAY:
+			appArray = createNewAppArray();
+			break;
+		case CREATE_NEW_APP:
+			app = createNewApp();
+			addAppToAppArray(app, appArray, appArrayCount);
+			appArrayCount++;
+			break;
+		case READ_ALL_APPS:
+			displayAppArray(appArray, appArrayCount);
+			break;
+        case UPDATE_APP:
+            appIndex = chooseApp(appArray, appArrayCount);
+            updateApp(appArray, appIndex);
+            break;
+    	default:
+    		cout << "\n\r"
+    		ERROR_MSG << "\n\r";
+    		break;
+		}
+	} while (choice != QUIT);
+
+	cout << "\n\r" << "Quitting..." << "\n";
+}
+
+/******************************************************************************
+ * Prints all menu options.
+ *
+ * @param void
+ * @return void
+ ******************************************************************************/
+
+void updateApp(Application* appArray, int appIndex)
+{
+	Application* app;
+
+	app = createNewApp();
+
+	appArray[appIndex].name = (*app).name;
+	appArray[appIndex].price = (*app).price;
+}
+
+/******************************************************************************
+ * Prints all menu options.
+ *
+ * @param void
+ * @return void
+ ******************************************************************************/
+
+int chooseApp(Application* appArray, int appArrayCount)
+{
+	int selectedIndex;
+
+	printSelectedOption(UPDATE_APP_MSG);
+	displayAppArray(appArray, appArrayCount);
+
+	cout << "Enter the index of the application you wish to edit: ";
+	cin >> selectedIndex;
+
+	return selectedIndex;
+}
+
+/******************************************************************************
+ * Prints all menu options.
+ *
+ * @param void
+ * @return void
+ ******************************************************************************/
+
+void displayAppArray(Application* appArray, int appArrayCount)
+{
+	cout << "\nThe current applications are: \n";
+	for (int i = 0; i < appArrayCount; i++)
+	{
+		cout << "[" << i << "] " << appArray[i].name << ", $"
+				<< appArray[i].price << "\n";
+	}
+}
+
+/******************************************************************************
+ * Prints all menu options.
+ *
+ * @param void
+ * @return void
+ ******************************************************************************/
+
+void addAppToAppArray(Application* app, Application* appArray,
+		int appArrayCount)
+{
+		appArray[appArrayCount].name = (*app).name;
+		appArray[appArrayCount].price = (*app).price;
+}
+
+/******************************************************************************
+ * Prints all menu options.
+ *
+ * @param void
+ * @return void
+ ******************************************************************************/
+
+Application* createNewApp()
+{
+	Application* newApp;
+	newApp = new Application;
+
+	printSelectedOption(CREATE_NEW_APP_MSG);
+
+	cout << "Please enter the name of the application: \n";
+	cin >> (*newApp).name;
+
+	cout << "Please enter the price of the application: \n";
+	cin >> (*newApp).price;
+
+	return newApp;
+}
+
+/******************************************************************************
+ * Prints all menu options.
+ *
+ * @param void
+ * @return void
+ ******************************************************************************/
+
+Application* createNewAppArray()
+{
+	Application* appArray;
+	int arraySize;
+
+	printSelectedOption(CREATE_NEW_APP_ARRAY_MSG);
+
+	cout << "Enter the number of applications you anticipate creating:";
+	cin >> arraySize;
+	cout << "\n";
+
+	appArray = new Application[arraySize];
+
+	return appArray;
+}
+
+/******************************************************************************
+ * Prints all menu options.
+ *
+ * @param void
+ * @return void
+ ******************************************************************************/
+
+int displayMainMenu()
+{
+	int userChoice;
+
+	cout << "\n------------------------------\n";
+	printMenuOption(CREATE_NEW_APP_ARRAY, CREATE_NEW_APP_ARRAY_MSG);
+	printMenuOption(CREATE_NEW_APP, CREATE_NEW_APP_MSG);
+	printMenuOption(READ_ALL_APPS, READ_ALL_APPS_MSG);
+	printMenuOption(UPDATE_APP, UPDATE_APP_MSG);
+	printMenuOption(QUIT, QUIT_MSG);
+
+	cout << "\nPlease select an option : ";
+	cin >> userChoice;
+
+	return userChoice;
+}
+
+/******************************************************************************
+ * Prints a single menu options.
+ *
+ * @param  numerical value of menu option
+ *         text to be displayed for menu option
+ * @return void
+ ******************************************************************************/
+
+void printMenuOption(int optionValue, string optionMessage)
+{
+	cout << "[" << optionValue << "] " << optionMessage << "\n";
+}
+
+/******************************************************************************
+ * Prints a single menu options.
+ *
+ * @param  numerical value of menu option
+ *         text to be displayed for menu option
+ * @return void
+ ******************************************************************************/
+
+void printSelectedOption(string optionMessage)
+{
+	cout << "\n-- " << optionMessage << " --\n\r";
+}

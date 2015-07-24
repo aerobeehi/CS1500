@@ -1,19 +1,6 @@
-20:47:57 **** Incremental Build of configuration Debug for project LAB04 ****
+09:10:24 **** Incremental Build of configuration Debug for project LAB04 ****
 make all 
-Building file: ../src/Lab_04_QuickSort_Clarke_Lauria.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Lab_04_QuickSort_Clarke_Lauria.d" -MT"src/Lab_04_QuickSort_Clarke_Lauria.d" -o "src/Lab_04_QuickSort_Clarke_Lauria.o" "../src/Lab_04_QuickSort_Clarke_Lauria.cpp"
-../src/Lab_04_QuickSort_Clarke_Lauria.cpp:41:1: warning: control reaches end of non-void function [-Wreturn-type]
-}
-^
-1 warning generated.
-Finished building: ../src/Lab_04_QuickSort_Clarke_Lauria.cpp
- 
-Building target: LAB04
-Invoking: MacOS X C++ Linker
-g++  -o "LAB04"  ./src/Lab_04_QuickSort_Clarke_Lauria.o   
-Finished building target: LAB04
- 
+make: Nothing to be done for `all'.
 
-20:47:57 Build Finished (took 402ms)
+09:10:24 Build Finished (took 61ms)
 

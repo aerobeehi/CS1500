@@ -1,0 +1,224 @@
+/*
+ * HW_02_QuickSort_BinarySearch_Clarke_Lauria.cpp
+ *
+ *  Created on: Jul 12, 2015
+ *     Author: lauriaclarke
+ */
+
+/***************************** Include Files *********************************/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+/************************** Constant Definitions *****************************/
+
+/************************** Function Prototypes ******************************/
+
+void displayApplication(int appIndex, string appNames[], float appPrices[]);
+void displayAllApplications(string appNames[], float appPrices[], int appCount);
+void swapApps(int appIndex1, int appIndex2, string appNames[],
+		float appPrices[]);
+int pivot(int first, int last, string appNames[], float appPrices[]);
+void quickSort(int first, int last, string appNames[], float appPrices[]);
+int binarySearchForPrice(float searchPrice, int first, int last,
+		float appPrices[]);
+
+/************************** Variable Definitions *****************************/
+
+
+
+string appNames[] =
+{ "Pages", "Keynote", "Numbers", "Word", "PowerPoint", "Excel", "Documents",
+		"Presentation", "Sheets" };
+float appPrices[] =
+{ 3.99, 2.99, 1.99, 19.99, 29.99, 39.99, 34.99, 24.99, 14.99 };
+
+/******************************************************************************/
+/******************************************************************************/
+int main()
+{
+	int foundIndex;
+
+	displayAllApplications(appNames, appPrices, 9);
+	quickSort(0, 8, appNames, appPrices);
+	displayAllApplications(appNames, appPrices, 9);
+	foundIndex = binarySearchForPrice(2.99, 0, 9, appPrices);
+//	foundIndex = binarySearchForPrice(2.99, 0, 9, appPrices);
+
+	if (foundIndex == -1)
+	{
+		cout << "\n Price not Found. Please try again.\n" << endl;
+	}
+	else
+	{
+		cout << "Found at index " << foundIndex << endl;
+	}
+	return 0;
+}
+
+/******************************************************************************
+ * Prints the selected application and its price.
+ *
+ * @param  Index of desired application
+ *         Array containing all application names
+ *         Array containing all application prices
+ * @return void
+ ******************************************************************************/
+
+void displayApplication(int appIndex, string appNames[], float appPrices[])
+{
+	cout << "\nApplications - \n";
+	cout << "(" << appIndex << ") " << appNames[appIndex] << "  $"
+			<< appPrices[appIndex] << "\n";
+
+}
+
+/******************************************************************************
+ * Prints all all applications and their prices.
+ *
+ * @param  Array containing all application names
+ *         Array containing all application prices
+ *         Number of applicaitons
+ * @return void
+ ******************************************************************************/
+
+void displayAllApplications(string appNames[], float appPrices[], int appCount)
+{
+	cout << "\nApplications - \n";
+	for (int i = 0; i < appCount; i++)
+	{
+		cout << "(" << i + 1 << ") " << appNames[i] << "  $" << appPrices[i]
+				<< "\n";
+	}
+}
+
+/******************************************************************************
+ * Swaps the position of two application names and their prices within the
+ * name and price arrays.
+ *
+ * @param  Index of first element to be swapped
+ *         Index of second element to be swapped
+ *         Array of application names
+ *         Array of appication prices
+ * @return void
+ ******************************************************************************/
+
+void swapApps(int appIndex1, int appIndex2, string appNames[],
+		float appPrices[])
+{
+	string temporaryString;
+	float temporaryFloat;
+
+	temporaryString = appNames[appIndex1];
+	temporaryFloat = appPrices[appIndex1];
+
+	appNames[appIndex1] = appNames[appIndex2];
+	appPrices[appIndex1] = appPrices[appIndex2];
+
+	appNames[appIndex2] = temporaryString;
+	appPrices[appIndex2] = temporaryFloat;
+}
+
+/******************************************************************************
+ * Starting with the second element in the array, pivot compares the value of
+ * the element found at pivotIndex to pivotValue. Initially, these are equal
+ * to the first and second elements in the array. If the value of the second
+ * element is smaller than the first element, the positions of the two elements
+ * are reversed using 'swap' and the search index in incremented by one. The
+ *
+ *
+ * @param  Index of first element in array
+ *         Index of last element in array
+ *         Array of names
+ *         Array of prices
+ * @return Index
+ ******************************************************************************/
+
+int pivot(int first, int last, string appNames[], float appPrices[])
+{
+	string pivotValue;
+	int pivotIndex;
+
+	pivotIndex = first;
+	pivotValue = appNames[first];
+
+	for (int i = first + 1; i <= last; i++)
+	{
+		if (appNames[i] < pivotValue)
+		{
+			pivotIndex++;
+			swapApps(i, pivotIndex, appNames, appPrices);
+//			displayAllApplications(appNames, appPrices, 9);
+		}
+	}
+	swapApps(first, pivotIndex, appNames, appPrices);
+	return pivotIndex;
+}
+
+/******************************************************************************
+ * Prints all menu options.
+ *
+ * @param void
+ * @return void
+ ******************************************************************************/
+
+void quickSort(int first, int last, string appNames[], float appPrices[])
+{
+	int pivotIndex;
+
+	if (first < last)
+	{
+		pivotIndex = pivot(first, last, appNames, appPrices);
+		quickSort(first, pivotIndex - 1, appNames, appPrices);
+		quickSort(pivotIndex + 1, last, appNames, appPrices);
+	}
+}
+
+/******************************************************************************
+ * Compares desired price - searchPrice - with elements in the array until a
+ * match is found.
+ * The index center entry of the array is calculated based on
+ * the indicies of the first and last entries in the array. The value at the
+ * center of the array is then compared to the desired value. If the middle
+ * value is lower than the desired value the function is called again, using
+ * the middle + 1 index as the new lowest index. If the middle value is greater
+ * than the desired value the function is called again using the middle - 1 and
+ * the new lowest index. The recursion continues until the value of the array
+ * at the middle index matches searchPrice.
+ * This function is only effective with pre-sorted arrays.
+ *
+ * @param  Desired price
+ *         Index of first application in array
+ *         Index of last application in array
+ *         Array of application prices
+ * @return Index of application with desired price
+ ******************************************************************************/
+
+int binarySearchForPrice(float searchPrice, int first, int last,
+		float appPrices[])
+{
+	int middle = (first + last) / 2;
+
+	if (last > first)
+	{
+		// If the last index is smaller than the first there's a problem.
+		return -1;
+	}
+	else if (searchPrice == appPrices[middle])
+	{
+		// Return the index of the correct price once it has been found.
+		return middle;
+	}
+	else if (searchPrice < appPrices[middle])
+	{
+		// Search lower half of array.
+		return binarySearchForPrice(searchPrice, first, middle - 1, appPrices);
+	}
+	else if (searchPrice > appPrices[middle])
+	{
+		// Search upper half of array.
+		return binarySearchForPrice(searchPrice, middle + 1, last, appPrices);
+	}
+	return 0;
+}
